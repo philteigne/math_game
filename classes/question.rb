@@ -1,6 +1,6 @@
 class Question
 
-  attr_reader :answer, :user_answer
+  attr_reader :answer, :num1, :num2
 
   def initialize()
     @num1 = rand(1..20)
