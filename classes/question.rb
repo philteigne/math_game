@@ -8,10 +8,4 @@ class Question
     @answer = @num1 + @num2
   end
 
-  def prompt(player)
-    puts "----- NEW TURN -----"
-    puts "#{player}: What does #{@num1} plus #{@num2} equal?"
-    @user_answer = gets
-  end
-
 end
