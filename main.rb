@@ -12,6 +12,8 @@ def prompt_question(player, question)
   return gets.chomp() == question.answer
 end
 
+question_count = 0
+
 # If either player has lives the game continues
 while Player1.lives > 0 && Player2.lives > 0
 
@@ -39,5 +41,7 @@ while Player1.lives > 0 && Player2.lives > 0
 
     puts "Seriously? No!"
   end
+
+  puts "P1: #{Player1.lives}/3 vs P2: #{Player2.lives}/3"
 
 end
