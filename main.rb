@@ -9,7 +9,7 @@ Player2 = Player.new()
 def prompt_question(player, question)
   puts "----- NEW TURN -----"
   puts "#{player}: What does #{question.num1} plus #{question.num2} equal?"
-  return gets.chomp() == question.answer
+  return gets.chomp().to_i == question.answer
 end
 
 question_count = 0
@@ -45,3 +45,17 @@ while Player1.lives > 0 && Player2.lives > 0
   puts "P1: #{Player1.lives}/3 vs P2: #{Player2.lives}/3"
 
 end
+
+# figure out who won
+if Player1.lives == 0
+  winner = "Player 2"
+  score = Player2.lives
+else
+  winner = "Player 1"
+  score = Player1.lives
+end
+
+# declare winner
+puts "#{winner} wins with a score of #{score}/3"
+puts "----- GAME OVER -----"
+puts "Good by!"
